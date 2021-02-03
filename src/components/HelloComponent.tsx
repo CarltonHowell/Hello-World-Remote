@@ -8,7 +8,7 @@ const HelloComponent = (props: Props) => {
 
     return(
         <div style={{
-            backgroundColor: 'red',
+            backgroundColor: 'blue',
             borderStyle: 'solid',
             borderColor: 'blue',
             borderWidth: 2,

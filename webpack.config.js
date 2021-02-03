@@ -31,14 +31,16 @@ module.exports = {
   plugins: [
     new ModuleFederationPlugin({
       name: "hello_world_remote",
-      library: { type: "var", name: "hello_world_remote" },
       remotes: {},
-       filename: "remoteEntry.js",
+      filename: "remoteEntry.js",
       exposes: {
         "./HelloComponent": "./src/components/HelloComponent",
         // "./routes": "./src/routes/routes",
       },
       shared: {
+        react: {
+          singleton: true,
+        }
       //   react: {
       //     singleton: true,
       //     strictVersion: true,
